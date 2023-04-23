@@ -1,0 +1,14 @@
+version: '1'
+services: 
+  postgres:
+    image: postgres
+    restart: on-failure
+    environment:
+       - POSTGRES_USER=postgres
+       - POSTGRES_PASSWORD=postgres
+       - PGDATA=/var/lib/postgresql/data/pgdata
+       - POSTGRES_DB=postgres
+    volumes:
+       - ./postgres_data:/var/lib/postgresql
+    ports:
+       - 5432:5432
