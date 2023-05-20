@@ -17,6 +17,7 @@ interface ExtendedNextApiRequest extends NextApiRequest {
     imageUrl: string;
     theme: string;
     room: string;
+    prompt: string;
   };
 }
 
@@ -68,11 +69,7 @@ export default async function handler(
   });
 
   try {
-    const { imageUrl, theme, room } = req.body;
-    const prompt =
-      room === "Gaming Room"
-        ? "a video gaming room"
-        : `a ${theme.toLowerCase()} ${room.toLowerCase()}`;
+    const { imageUrl, theme, room, prompt } = req.body;
 
     let base64Image = await toBase64ImageUrl(imageUrl);
 
