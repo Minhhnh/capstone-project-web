@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { UploadDropzone } from "react-uploader";
-import { Uploader } from "uploader";
+import { UploadWidgetConfig, Uploader } from "uploader";
 import Step from "./Step";
 import { Toaster, toast } from "react-hot-toast";
 import { roomType, themeType } from "../utils/dropdownTypes";
@@ -21,10 +21,15 @@ const uploader = Uploader({
     : "free",
 });
 
-const options = {
+const options: UploadWidgetConfig = {
   maxFileCount: 1,
   mimeTypes: ["image/jpeg", "image/png", "image/jpg"],
-  editor: { images: { crop: false } },
+  editor: {
+    images: {
+      crop: false,
+      preview: true,
+    },
+  },
 };
 
 const AIComponent = () => {
