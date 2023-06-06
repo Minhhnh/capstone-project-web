@@ -36,10 +36,10 @@ const Home: NextPage = () => {
             <AIComponent />
           ) : (
             <>
-              <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
-                <div className="max-w-xl text-gray-300">
+              <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] mx-auto -mt-8">
+                <div className="max-w-2xl text-gray-300 mt-8 text-center  ">
                   Sign in below with Google to create a free account and
-                  redesign your room today. You will get 3 generations for free.
+                  redesign your room today.
                 </div>
                 <button
                   onClick={() => signIn("google")}
