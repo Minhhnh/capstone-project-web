@@ -4,7 +4,7 @@ const serverInstance = axios.create({
   baseURL:
     !process.env.NODE_ENV || process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "http://localhost:3000",
+      : "https://minhhnh.tech",
 });
 
 interface ISWR {
