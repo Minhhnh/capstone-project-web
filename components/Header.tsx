@@ -19,7 +19,7 @@ export default function Header({
           height={24}
         />
         <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight">
-          roomGPT.io
+          Room Generator
         </h1>
       </Link>
       {email ? (
@@ -30,7 +30,7 @@ export default function Header({
           >
             <div>Dashboard</div>
           </Link>
-          <Link
+          {/* <Link
             href="/buy-credits"
             className="border-r border-gray-300 pr-4 flex space-x-2 hover:text-blue-400 transition"
           >
@@ -38,7 +38,7 @@ export default function Header({
             <div className="text-blue-500 bg-blue-200 rounded-full px-2 text-xs flex justify-center items-center font-bold">
               New
             </div>
-          </Link>
+          </Link> */}
           {photo ? (
             <Image
               alt="Profile picture"
