@@ -217,6 +217,7 @@ const AIComponent = () => {
               setRestoredImage(null);
               setRestoredLoaded(false);
               setError(null);
+              setSideBySide(false);
             }}
             className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
           >
