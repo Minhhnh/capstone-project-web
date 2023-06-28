@@ -16,12 +16,6 @@ It uses an ML model called [ControlNet](https://github.com/lllyasviel/ControlNet
 git clone https://github.com/Nutlope/roomGPT
 ```
 
-### Creating a account on Replicate to get an API key.
-
-1. Go to [Replicate](https://replicate.com/) to make an account.
-2. Click on your profile picture in the top right corner, and click on "Dashboard".
-3. Click on "Account" in the navbar. And, here you can find your API token, copy it.
-
 ### Storing the API keys in .env
 
 Create a file in root directory of project with env. And store your API key in it, as shown in the .example.env file.
