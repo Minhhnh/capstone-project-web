@@ -1,5 +1,8 @@
+import { Button } from "@nextui-org/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header({
   photo,
@@ -8,6 +11,9 @@ export default function Header({
   photo?: string;
   email?: string;
 }) {
+  const { status } = useSession();
+  const router = useRouter();
+
   return (
     <header className="flex flex-col xs:flex-row justify-between items-center w-full mt-3 border-b pb-7 sm:px-4 px-2 border-gray-500 gap-2">
       <Link href="/dream" className="flex space-x-2">
@@ -50,6 +56,17 @@ export default function Header({
           ) : (
             <div className="w-10 h-10 rounded-full bg-white" />
           )}
+          <Button
+            onClick={() => {
+              signOut();
+              router.replace("/");
+            }}
+            light
+            color="primary"
+            auto
+          >
+            Sign out
+          </Button>
         </div>
       ) : (
         <Link
