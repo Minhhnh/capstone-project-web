@@ -15,7 +15,7 @@ export default function Dashboard({ rooms }: { rooms: Room[] }) {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT Dashboard</title>
+        <title>Room Generator Dashboard</title>
       </Head>
       <Header
         photo={session?.user?.image || undefined}
