@@ -91,6 +91,7 @@ export default async function handler(
         width: size.width,
         height: size.height,
         denoising_strength: 0.6,
+        seed: 345678,
       }),
     });
 
